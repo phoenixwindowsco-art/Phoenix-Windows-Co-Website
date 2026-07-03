@@ -138,23 +138,24 @@ export function QuoteForm() {
               </div>
               <div className="sm:col-span-1">
                 <label
-                  htmlFor="service"
+                  htmlFor="stories"
                   className="mb-1.5 block text-sm font-medium text-foreground"
                 >
-                  Service Type
+                  Number of Stories
                 </label>
                 <select
-                  id="service"
-                  name="service"
+                  id="stories"
+                  name="stories"
                   required
                   defaultValue=""
                   className={inputClasses}
                 >
                   <option value="" disabled>
-                    Select a service
+                    Select stories
                   </option>
-                  <option value="exterior">Exterior Only</option>
-                  <option value="commercial">Commercial</option>
+                  <option value="1">1 Story</option>
+                  <option value="2">2 Stories</option>
+                  <option value="3-plus">3+ Stories</option>
                 </select>
               </div>
 
