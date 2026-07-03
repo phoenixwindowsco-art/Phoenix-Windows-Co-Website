@@ -16,10 +16,10 @@ const tiers = [
     popular: false,
   },
   {
-    name: '11–30 Windows',
+    name: '11–20 Windows',
     price: '$120–$170',
     features: [
-      '11–30 exterior windows',
+      '11–20 exterior windows',
       'Streak-free results',
       'Frame wipe-down',
       'Sill cleaning included',
