@@ -1,0 +1,61 @@
+import { Analytics } from '@vercel/analytics/next'
+import type { Metadata, Viewport } from 'next'
+import { DM_Sans, Geist_Mono } from 'next/font/google'
+import './globals.css'
+
+const dmSans = DM_Sans({
+  variable: '--font-dm-sans',
+  subsets: ['latin'],
+  display: 'swap',
+})
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+})
+
+export const metadata: Metadata = {
+  title: 'Phoenix Pane Co. — Window Cleaning That Gives Back',
+  description:
+    'Streak-free, professional window cleaning for homes and businesses across Southern California. 20% of every job is donated to California fire relief.',
+  generator: 'v0.app',
+  icons: {
+    icon: [
+      {
+        url: '/icon-light-32x32.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/icon-dark-32x32.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        url: '/icon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    apple: '/apple-icon.png',
+  },
+}
+
+export const viewport: Viewport = {
+  colorScheme: 'dark',
+  themeColor: '#0a0a0f',
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html
+      lang="en"
+      className={`${dmSans.variable} ${geistMono.variable} bg-background`}
+    >
+      <body className="font-sans antialiased">
+        {children}
+        {process.env.NODE_ENV === 'production' && <Analytics />}
+      </body>
+    </html>
+  )
+}
