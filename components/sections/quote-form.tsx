@@ -1,19 +1,15 @@
 'use client'
 
-import { useState, type FormEvent } from 'react'
 import { CheckCircle2 } from 'lucide-react'
+import { useForm, ValidationError } from '@formspree/react'
 import { Reveal } from '@/components/reveal'
 
 const inputClasses =
   'w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/40'
 
 export function QuoteForm() {
-  const [submitted, setSubmitted] = useState(false)
-
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    setSubmitted(true)
-  }
+  const [state, handleSubmit] = useForm('mnjkzado')
+  const submitted = state.succeeded
 
   return (
     <section id="quote" className="scroll-mt-28 bg-background">
@@ -38,13 +34,16 @@ export function QuoteForm() {
         >
           {submitted ? (
             <div className="flex flex-col items-center gap-3 py-10 text-center">
-              <CheckCircle2 className="size-12 text-primary" aria-hidden="true" />
-              <h3 className="text-xl font-semibold text-foreground">
-                Thank you!
-              </h3>
-              <p className="max-w-sm text-muted-foreground">
-                Your request has been received. We&apos;ll be in touch shortly
-                with your free, transparent quote.
+              <CheckCircle2
+                className="size-12"
+                style={{ color: '#E8860A' }}
+                aria-hidden="true"
+              />
+              <p
+                className="max-w-sm text-lg font-semibold"
+                style={{ color: '#E8860A' }}
+              >
+                Thanks! We&apos;ll be in touch shortly with your free quote.
               </p>
             </div>
           ) : (
@@ -96,6 +95,11 @@ export function QuoteForm() {
                   placeholder="jane@example.com"
                   className={inputClasses}
                 />
+                <ValidationError
+                  field="email"
+                  errors={state.errors}
+                  className="mt-1 text-xs text-destructive"
+                />
               </div>
               <div className="sm:col-span-1">
                 <label
@@ -138,31 +142,33 @@ export function QuoteForm() {
               </div>
               <div className="sm:col-span-1">
                 <label
-                  htmlFor="service"
+                  htmlFor="stories"
                   className="mb-1.5 block text-sm font-medium text-foreground"
                 >
-                  Service Type
+                  Number of Stories
                 </label>
                 <select
-                  id="service"
-                  name="service"
+                  id="stories"
+                  name="stories"
                   required
                   defaultValue=""
                   className={inputClasses}
                 >
                   <option value="" disabled>
-                    Select a service
+                    Select stories
                   </option>
-                  <option value="exterior">Exterior Only</option>
-                  <option value="commercial">Commercial</option>
+                  <option value="1">1 Story</option>
+                  <option value="2">2 Stories</option>
+                  <option value="3-plus">3+ Stories</option>
                 </select>
               </div>
 
               <button
                 type="submit"
-                className="mt-2 inline-flex w-full items-center justify-center rounded-xl bg-accent px-6 py-3.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90 sm:col-span-2"
+                disabled={state.submitting}
+                className="mt-2 inline-flex w-full items-center justify-center rounded-xl bg-accent px-6 py-3.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 sm:col-span-2"
               >
-                Submit for Free Quote
+                {state.submitting ? 'Submitting…' : 'Submit for Free Quote'}
               </button>
             </form>
           )}
