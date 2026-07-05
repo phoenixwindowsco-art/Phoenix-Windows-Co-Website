@@ -1,5 +1,6 @@
 import { Droplets, Layers, Sparkles, Building2 } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
+import { SectionBackdrop } from '@/components/section-backdrop'
 
 const services = [
   {
@@ -30,8 +31,12 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="scroll-mt-28 bg-surface-2">
-      <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+    <section
+      id="services"
+      className="relative scroll-mt-28 overflow-hidden bg-surface-2"
+    >
+      <SectionBackdrop variant="ember" />
+      <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">
             Our Services

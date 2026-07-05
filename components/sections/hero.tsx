@@ -19,8 +19,22 @@ const badges = [
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-background">
+      {/* California dusk backdrop */}
       <div
-        className="pointer-events-none absolute inset-0 opacity-40"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage: 'url(/images/altadena-dusk.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+        aria-hidden="true"
+      />
+      {/* Dark overlay to keep all text fully readable */}
+      <div className="pointer-events-none absolute inset-0 bg-background/80" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/60 via-background/75 to-background" />
+      {/* Faint ember accent on top */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-20"
         style={{
           backgroundImage: 'url(/images/ember-texture.png)',
           backgroundSize: 'cover',
@@ -28,7 +42,6 @@ export function Hero() {
         }}
         aria-hidden="true"
       />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
 
       <div className="relative mx-auto max-w-3xl px-4 py-24 text-center sm:px-6 sm:py-32 lg:px-8">
         <Reveal>

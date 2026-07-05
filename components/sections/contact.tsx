@@ -1,11 +1,16 @@
 import { Phone, Mail } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
+import { SectionBackdrop } from '@/components/section-backdrop'
 import { InstagramIcon, FacebookIcon } from '@/components/social-icons'
 
 export function Contact() {
   return (
-    <section id="contact" className="scroll-mt-28 bg-surface-2">
-      <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+    <section
+      id="contact"
+      className="relative scroll-mt-28 overflow-hidden bg-surface-2"
+    >
+      <SectionBackdrop variant="scenery" />
+      <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">
             Get In Touch

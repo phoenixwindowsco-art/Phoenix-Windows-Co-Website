@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from 'react'
 import { CheckCircle2 } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
+import { SectionBackdrop } from '@/components/section-backdrop'
 
 const inputClasses =
   'w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/40'
@@ -16,8 +17,12 @@ export function QuoteForm() {
   }
 
   return (
-    <section id="quote" className="scroll-mt-28 bg-background">
-      <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+    <section
+      id="quote"
+      className="relative scroll-mt-28 overflow-hidden bg-background"
+    >
+      <SectionBackdrop variant="ember" />
+      <div className="relative mx-auto max-w-3xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">
             Free Estimate

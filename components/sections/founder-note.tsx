@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import { Flame } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
+import { SectionBackdrop } from '@/components/section-backdrop'
 
 export function FounderNote() {
   return (
-    <section className="bg-surface-2">
-      <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+    <section className="relative overflow-hidden bg-surface-2">
+      <SectionBackdrop variant="scenery" />
+      <div className="relative mx-auto max-w-3xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
         <Reveal>
           <p className="text-center text-sm font-semibold uppercase tracking-widest text-accent">
             Why We&apos;re Different 🔥
