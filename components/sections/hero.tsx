@@ -21,24 +21,21 @@ export function Hero() {
     <section className="relative overflow-hidden bg-background">
       {/* California dusk backdrop */}
       <div
-        className="pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: 'url(/images/altadena-dusk.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
         }}
         aria-hidden="true"
       />
-      {/* Dark overlay to keep all text fully readable */}
-      <div className="pointer-events-none absolute inset-0 bg-background/80" />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/60 via-background/75 to-background" />
+      {/* ~72% dark overlay so the scenery shows through but text stays fully readable */}
+      <div className="pointer-events-none absolute inset-0 bg-background/[0.72]" />
+      {/* Soft gradient anchoring the copy for extra contrast at top/bottom */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background" />
       {/* Faint ember accent on top */}
       <div
-        className="pointer-events-none absolute inset-0 opacity-20"
+        className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-30 mix-blend-screen"
         style={{
           backgroundImage: 'url(/images/ember-texture.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
         }}
         aria-hidden="true"
       />

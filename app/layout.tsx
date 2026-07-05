@@ -19,13 +19,8 @@ export const metadata: Metadata = {
     'Streak-free, professional window cleaning for homes and businesses across Southern California. 20% of every job is donated to California fire relief.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/phoenix-badge.png',
+    apple: '/phoenix-badge.png',
   },
 }
 

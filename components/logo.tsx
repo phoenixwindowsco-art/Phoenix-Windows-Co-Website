@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { PhoenixIcon } from '@/components/phoenix-icon'
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 export function Logo({ className }: { className?: string }) {
@@ -12,9 +12,14 @@ export function Logo({ className }: { className?: string }) {
       )}
       aria-label="Phoenix Pane Co. home"
     >
-      <span className="flex size-8 items-center justify-center rounded-lg bg-accent/15">
-        <PhoenixIcon className="size-5 text-accent" />
-      </span>
+      <Image
+        src="/phoenix-badge.png"
+        alt=""
+        width={36}
+        height={36}
+        className="size-9 rounded-lg ring-1 ring-accent/25"
+        priority
+      />
       <span className="text-lg">Phoenix Pane Co.</span>
     </Link>
   )
