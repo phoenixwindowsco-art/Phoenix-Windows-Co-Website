@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, type FormEvent } from 'react'
+import { useForm, ValidationError } from '@formspree/react'
 import { CheckCircle2 } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
 import { SectionBackdrop } from '@/components/section-backdrop'
@@ -9,12 +9,8 @@ const inputClasses =
   'w-full rounded-md border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/40'
 
 export function QuoteForm() {
-  const [submitted, setSubmitted] = useState(false)
-
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    setSubmitted(true)
-  }
+  const [state, handleSubmit] = useForm('xaewwgol')
+  const submitted = state.succeeded
 
   return (
     <section
@@ -100,6 +96,12 @@ export function QuoteForm() {
                   placeholder="jane@example.com"
                   className={inputClasses}
                 />
+                <ValidationError
+                  prefix="Email"
+                  field="email"
+                  errors={state.errors}
+                  className="mt-1.5 text-sm text-destructive"
+                />
               </div>
               <div className="sm:col-span-1">
                 <label
@@ -173,12 +175,19 @@ export function QuoteForm() {
                 </select>
               </div>
 
-              <button
-                type="submit"
-                className="mt-2 inline-flex w-full items-center justify-center rounded-md bg-accent px-6 py-3.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90 sm:col-span-2"
-              >
-                Submit for Free Quote
-              </button>
+              <div className="sm:col-span-2">
+                <ValidationError
+                  errors={state.errors}
+                  className="mb-3 text-sm text-destructive"
+                />
+                <button
+                  type="submit"
+                  disabled={state.submitting}
+                  className="inline-flex w-full items-center justify-center rounded-md bg-accent px-6 py-3.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  {state.submitting ? 'Sending…' : 'Submit for Free Quote'}
+                </button>
+              </div>
             </form>
           )}
         </Reveal>
