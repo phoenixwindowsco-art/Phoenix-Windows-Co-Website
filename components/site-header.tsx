@@ -7,7 +7,7 @@ import { Logo } from '@/components/logo'
 
 const navLinks = [
   { label: 'Services', href: '/#services' },
-  { label: 'Pricing', href: '/#pricing' },
+  { label: 'Our Promise', href: '/#pricing' },
   { label: 'Our Mission', href: '/our-mission' },
   { label: 'Free Quote', href: '/#quote' },
   { label: 'Contact', href: '/#contact' },
@@ -43,7 +43,7 @@ export function SiteHeader() {
           <div className="hidden lg:block">
             <Link
               href="/#quote"
-              className="inline-flex items-center rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
+              className="inline-flex items-center rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
             >
               Get a Free Quote
             </Link>
@@ -76,7 +76,7 @@ export function SiteHeader() {
               <Link
                 href="/#quote"
                 onClick={() => setOpen(false)}
-                className="mt-2 inline-flex items-center justify-center rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground"
+                className="mt-2 inline-flex items-center justify-center rounded-md bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground"
               >
                 Get a Free Quote
               </Link>

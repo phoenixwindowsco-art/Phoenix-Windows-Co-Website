@@ -6,7 +6,7 @@ import { InstagramIcon, FacebookIcon } from '@/components/social-icons'
 const quickLinks = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/#services' },
-  { label: 'Pricing', href: '/#pricing' },
+  { label: 'Our Promise', href: '/#pricing' },
   { label: 'Our Mission', href: '/our-mission' },
   { label: 'Contact', href: '/#contact' },
 ]
@@ -20,6 +20,10 @@ export function SiteFooter() {
             <Logo />
             <p className="mt-3 text-sm text-muted-foreground">
               Cleaning windows. Rebuilding communities.
+            </p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Exterior cleaning across Southern California — window cleaning,
+              pressure washing &amp; soft washing.
             </p>
           </div>
 
@@ -44,7 +48,7 @@ export function SiteFooter() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="flex size-10 items-center justify-center rounded-xl border border-border text-muted-foreground transition-colors hover:text-accent"
+              className="flex size-10 items-center justify-center rounded-md border border-border text-muted-foreground transition-colors hover:text-accent"
             >
               <InstagramIcon className="size-5" />
             </a>
@@ -53,7 +57,7 @@ export function SiteFooter() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="flex size-10 items-center justify-center rounded-xl border border-border text-muted-foreground transition-colors hover:text-accent"
+              className="flex size-10 items-center justify-center rounded-md border border-border text-muted-foreground transition-colors hover:text-accent"
             >
               <FacebookIcon className="size-5" />
             </a>
@@ -62,7 +66,7 @@ export function SiteFooter() {
 
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-border pt-6 text-center sm:flex-row sm:text-left">
           <p className="text-sm text-muted-foreground">
-            © 2025 Phoenix Pane Co. All rights reserved.
+            © 2025 Phoenix Windows Co. All rights reserved.
           </p>
           <p className="flex items-center gap-2 text-sm font-medium text-accent">
             <Flame className="size-4" aria-hidden="true" />

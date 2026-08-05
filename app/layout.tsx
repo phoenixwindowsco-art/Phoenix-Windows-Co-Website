@@ -14,26 +14,13 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Phoenix Pane Co. — Window Cleaning That Gives Back',
+  title: 'Phoenix Windows Co. — Exterior Cleaning That Gives Back',
   description:
-    'Streak-free, professional window cleaning for homes and businesses across Southern California. 20% of every job is donated to California fire relief.',
+    'Professional exterior cleaning across Southern California — streak-free window cleaning, pressure washing, and soft washing for homes and businesses. 20% of every job is donated to California fire relief.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/phoenix-badge.png',
+    apple: '/phoenix-badge.png',
   },
 }
 
