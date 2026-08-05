@@ -27,10 +27,10 @@ export function Contact() {
             </span>
             <h3 className="font-semibold text-foreground">Call or Text</h3>
             <a
-              href="tel:+15551234567"
+              href="tel:+12134258497"
               className="text-sm text-muted-foreground transition-colors hover:text-primary"
             >
-              (555) 123-4567
+              (213) 425-8497
             </a>
           </Reveal>
 
@@ -43,10 +43,10 @@ export function Contact() {
             </span>
             <h3 className="font-semibold text-foreground">Email Us</h3>
             <a
-              href="mailto:hello@phoenixpane.co"
+              href="mailto:phoenixwindowsco@gmail.com"
               className="text-sm text-muted-foreground transition-colors hover:text-primary"
             >
-              hello@phoenixpane.co
+              phoenixwindowsco@gmail.com
             </a>
           </Reveal>
 
@@ -60,7 +60,7 @@ export function Contact() {
             <h3 className="font-semibold text-foreground">Follow Us</h3>
             <div className="flex items-center gap-3">
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/phoenixwindowsco"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
