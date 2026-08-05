@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Phoenix Pane Co. — Window Cleaning That Gives Back',
+  title: 'Phoenix Windows Co. — Window Cleaning That Gives Back',
   description:
     'Streak-free, professional window cleaning for homes and businesses across Southern California. 20% of every job is donated to California fire relief.',
   generator: 'v0.app',

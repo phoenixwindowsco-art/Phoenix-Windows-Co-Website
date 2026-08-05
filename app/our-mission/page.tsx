@@ -7,9 +7,9 @@ import { SiteFooter } from '@/components/site-footer'
 import { Reveal } from '@/components/reveal'
 
 export const metadata: Metadata = {
-  title: 'Our Mission — Phoenix Pane Co.',
+  title: 'Our Mission — Phoenix Windows Co.',
   description:
-    'Born from the Eaton Fires. Phoenix Pane Co. donates 20% of every job to sustained Eaton Fire relief and recovery.',
+    'Born from the Eaton Fires. Phoenix Windows Co. donates 20% of every job to sustained Eaton Fire relief and recovery.',
 }
 
 function Divider() {
@@ -108,7 +108,7 @@ export default function OurMissionPage() {
               </div>
             </Reveal>
             <Reveal delay={120}>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-border">
                 <Image
                   src="/images/altadena-dusk.png"
                   alt="A warm-lit window in an Altadena neighborhood at dusk"
@@ -123,10 +123,10 @@ export default function OurMissionPage() {
 
         <Divider />
 
-        {/* Why Phoenix Pane Co. */}
+        {/* Why Phoenix Windows Co. */}
         <section className="bg-background">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
-            <Reveal className="mx-auto max-w-3xl rounded-2xl border border-border bg-card px-6 py-12 text-center sm:px-12">
+            <Reveal className="mx-auto max-w-3xl rounded-lg border border-border bg-card px-6 py-12 text-center sm:px-12">
               <p className="text-sm font-semibold uppercase tracking-widest text-accent">
                 Why We Started This
               </p>
@@ -147,7 +147,7 @@ export default function OurMissionPage() {
                   give back to them.
                 </p>
                 <p>
-                  Phoenix Pane Co. is that business. Every window we clean, every
+                  Phoenix Windows Co. is that business. Every window we clean, every
                   job we take, 20% of the profits go directly to organizations
                   supporting sustained Eaton Fire victim aid. Not a one-time
                   donation.{' '}
@@ -197,9 +197,9 @@ export default function OurMissionPage() {
                   <Reveal
                     key={stat.text}
                     delay={i * 80}
-                    className="flex flex-col items-center gap-3 rounded-xl border border-accent/30 bg-background p-6"
+                    className="flex flex-col items-center gap-3 rounded-md border border-accent/30 bg-background p-6"
                   >
-                    <span className="flex size-12 items-center justify-center rounded-xl bg-accent/15">
+                    <span className="flex size-12 items-center justify-center rounded-md bg-accent/15">
                       <Icon className="size-6 text-accent" aria-hidden="true" />
                     </span>
                     <p className="text-sm font-medium text-foreground">
@@ -234,9 +234,9 @@ export default function OurMissionPage() {
                   key={charity.name}
                   as="article"
                   delay={i * 80}
-                  className="rounded-xl border border-border bg-card p-6"
+                  className="rounded-md border border-border bg-card p-6"
                 >
-                  <span className="flex size-12 items-center justify-center rounded-xl bg-primary/10">
+                  <span className="flex size-12 items-center justify-center rounded-md bg-primary/10">
                     <HandHeart
                       className="size-6 text-primary"
                       aria-hidden="true"
@@ -254,7 +254,7 @@ export default function OurMissionPage() {
 
             <Reveal className="mt-8 text-center">
               <p className="mx-auto max-w-2xl text-sm italic text-muted-foreground">
-                As Phoenix Pane Co. grows, so will our giving. We are actively
+                As Phoenix Windows Co. grows, so will our giving. We are actively
                 seeking formal charity partnerships and will update this page as
                 relationships are established.
               </p>
@@ -277,13 +277,13 @@ export default function OurMissionPage() {
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <Link
                   href="/#quote"
-                  className="inline-flex w-full items-center justify-center rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90 sm:w-auto"
+                  className="inline-flex w-full items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90 sm:w-auto"
                 >
                   Get a Free Quote
                 </Link>
                 <Link
                   href="/"
-                  className="inline-flex w-full items-center justify-center rounded-xl border border-primary px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/10 sm:w-auto"
+                  className="inline-flex w-full items-center justify-center rounded-md border border-primary px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/10 sm:w-auto"
                 >
                   Back to Home
                 </Link>

@@ -6,7 +6,7 @@ import { Reveal } from '@/components/reveal'
 import { SectionBackdrop } from '@/components/section-backdrop'
 
 const inputClasses =
-  'w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/40'
+  'w-full rounded-md border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/40'
 
 export function QuoteForm() {
   const [submitted, setSubmitted] = useState(false)
@@ -28,8 +28,7 @@ export function QuoteForm() {
             Free Estimate
           </p>
           <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Get Your Free Window Cleaning{' '}
-            <span className="text-accent">Quote</span>
+            Get Your Free <span className="text-accent">Quote</span>
           </h2>
           <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
             Fill out the form below and we&apos;ll provide you with a custom
@@ -39,7 +38,7 @@ export function QuoteForm() {
 
         <Reveal
           delay={120}
-          className="mt-10 rounded-2xl border border-border bg-card p-6 sm:p-8"
+          className="mt-10 rounded-lg border border-border bg-card p-6 sm:p-8"
         >
           {submitted ? (
             <div className="flex flex-col items-center gap-3 py-10 text-center">
@@ -123,18 +122,18 @@ export function QuoteForm() {
                   htmlFor="windows"
                   className="mb-1.5 block text-sm font-medium text-foreground"
                 >
-                  Number of Windows
+                  Number of Windows{' '}
+                  <span className="text-muted-foreground">
+                    (if applicable)
+                  </span>
                 </label>
                 <select
                   id="windows"
                   name="windows"
-                  required
                   defaultValue=""
                   className={inputClasses}
                 >
-                  <option value="" disabled>
-                    Select a range
-                  </option>
+                  <option value="">Not applicable</option>
                   <option value="up-to-10">Up to 10</option>
                   <option value="11-20">11–20</option>
                   <option value="21-30">21–30</option>
@@ -158,14 +157,25 @@ export function QuoteForm() {
                   <option value="" disabled>
                     Select a service
                   </option>
-                  <option value="exterior">Exterior Only</option>
-                  <option value="commercial">Commercial</option>
+                  <optgroup label="Window Cleaning">
+                    <option value="window-exterior">
+                      Exterior Window Cleaning
+                    </option>
+                    <option value="window-commercial">
+                      Commercial Window Cleaning
+                    </option>
+                  </optgroup>
+                  <optgroup label="Pressure & Soft Washing">
+                    <option value="pressure-washing">Pressure Washing</option>
+                    <option value="soft-washing">Soft Washing</option>
+                  </optgroup>
+                  <option value="multiple">Multiple Services</option>
                 </select>
               </div>
 
               <button
                 type="submit"
-                className="mt-2 inline-flex w-full items-center justify-center rounded-xl bg-accent px-6 py-3.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90 sm:col-span-2"
+                className="mt-2 inline-flex w-full items-center justify-center rounded-md bg-accent px-6 py-3.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90 sm:col-span-2"
               >
                 Submit for Free Quote
               </button>

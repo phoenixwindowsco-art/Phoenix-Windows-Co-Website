@@ -27,13 +27,13 @@ export function Hero() {
         }}
         aria-hidden="true"
       />
-      {/* ~72% dark overlay so the scenery shows through but text stays fully readable */}
-      <div className="pointer-events-none absolute inset-0 bg-background/[0.72]" />
+      {/* ~55% dark overlay so the scenery reads clearly while text stays fully readable */}
+      <div className="pointer-events-none absolute inset-0 bg-background/55" />
       {/* Soft gradient anchoring the copy for extra contrast at top/bottom */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background" />
-      {/* Faint ember accent on top */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/60 via-background/25 to-background" />
+      {/* Ember accent on top */}
       <div
-        className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-30 mix-blend-screen"
+        className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-40 mix-blend-screen"
         style={{
           backgroundImage: 'url(/images/ember-texture.png)',
         }}
@@ -43,7 +43,7 @@ export function Hero() {
       <div className="relative mx-auto max-w-3xl px-4 py-24 text-center sm:px-6 sm:py-32 lg:px-8">
         <Reveal>
           <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
-            Phoenix Pane Co.
+            Phoenix Windows Co.
           </h1>
         </Reveal>
         <Reveal delay={100}>
@@ -63,13 +63,13 @@ export function Hero() {
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
               href="/#quote"
-              className="inline-flex w-full items-center justify-center rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90 sm:w-auto"
+              className="inline-flex w-full items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90 sm:w-auto"
             >
               Get a Free Quote
             </Link>
             <Link
               href="/#services"
-              className="inline-flex w-full items-center justify-center rounded-xl border border-primary px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/10 sm:w-auto"
+              className="inline-flex w-full items-center justify-center rounded-md border border-primary px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/10 sm:w-auto"
             >
               Our Services
             </Link>
@@ -83,7 +83,7 @@ export function Hero() {
               return (
                 <div
                   key={badge.title}
-                  className="flex flex-col items-center gap-2 rounded-xl border border-border bg-card p-5 text-center"
+                  className="flex flex-col items-center gap-2 rounded-md border border-border bg-card p-5 text-center"
                 >
                   <Icon className={`size-6 ${badge.color}`} aria-hidden="true" />
                   <div>

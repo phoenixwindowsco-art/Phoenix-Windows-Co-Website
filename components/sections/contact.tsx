@@ -21,8 +21,8 @@ export function Contact() {
         </Reveal>
 
         <div className="mx-auto mt-12 grid max-w-4xl gap-5 sm:grid-cols-3">
-          <Reveal className="flex flex-col items-center gap-3 rounded-xl border border-border bg-background p-6 text-center">
-            <span className="flex size-12 items-center justify-center rounded-xl bg-primary/10">
+          <Reveal className="flex flex-col items-center gap-3 rounded-md border border-border bg-background p-6 text-center">
+            <span className="flex size-12 items-center justify-center rounded-md bg-primary/10">
               <Phone className="size-6 text-primary" aria-hidden="true" />
             </span>
             <h3 className="font-semibold text-foreground">Call or Text</h3>
@@ -36,9 +36,9 @@ export function Contact() {
 
           <Reveal
             delay={80}
-            className="flex flex-col items-center gap-3 rounded-xl border border-border bg-background p-6 text-center"
+            className="flex flex-col items-center gap-3 rounded-md border border-border bg-background p-6 text-center"
           >
-            <span className="flex size-12 items-center justify-center rounded-xl bg-primary/10">
+            <span className="flex size-12 items-center justify-center rounded-md bg-primary/10">
               <Mail className="size-6 text-primary" aria-hidden="true" />
             </span>
             <h3 className="font-semibold text-foreground">Email Us</h3>
@@ -52,9 +52,9 @@ export function Contact() {
 
           <Reveal
             delay={160}
-            className="flex flex-col items-center gap-3 rounded-xl border border-border bg-background p-6 text-center"
+            className="flex flex-col items-center gap-3 rounded-md border border-border bg-background p-6 text-center"
           >
-            <span className="flex size-12 items-center justify-center rounded-xl bg-primary/10">
+            <span className="flex size-12 items-center justify-center rounded-md bg-primary/10">
               <InstagramIcon className="size-6 text-primary" />
             </span>
             <h3 className="font-semibold text-foreground">Follow Us</h3>

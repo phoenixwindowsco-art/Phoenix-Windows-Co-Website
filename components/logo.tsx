@@ -10,7 +10,7 @@ export function Logo({ className }: { className?: string }) {
         'flex items-center gap-2 font-bold tracking-tight text-foreground',
         className,
       )}
-      aria-label="Phoenix Pane Co. home"
+      aria-label="Phoenix Windows Co. home"
     >
       <Image
         src="/phoenix-badge.png"
@@ -20,7 +20,7 @@ export function Logo({ className }: { className?: string }) {
         className="size-9 rounded-lg ring-1 ring-accent/25"
         priority
       />
-      <span className="text-lg">Phoenix Pane Co.</span>
+      <span className="text-lg">Phoenix Windows Co.</span>
     </Link>
   )
 }

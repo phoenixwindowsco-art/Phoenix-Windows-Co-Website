@@ -16,17 +16,17 @@ export function SectionBackdrop({
       {variant === 'scenery' && (
         <>
           <div
-            className="absolute inset-0 bg-cover bg-center opacity-40"
+            className="absolute inset-0 bg-cover bg-center opacity-65"
             style={{
               backgroundImage: 'url(/images/altadena-dusk.png)',
             }}
           />
           {/* Dark overlay so all text and cards stay fully readable */}
-          <div className="absolute inset-0 bg-background/80" />
+          <div className="absolute inset-0 bg-background/65" />
         </>
       )}
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-screen"
+        className="absolute inset-0 bg-cover bg-center opacity-60 mix-blend-screen"
         style={{
           backgroundImage: 'url(/images/ember-texture.png)',
         }}
