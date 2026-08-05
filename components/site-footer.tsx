@@ -21,6 +21,10 @@ export function SiteFooter() {
             <p className="mt-3 text-sm text-muted-foreground">
               Cleaning windows. Rebuilding communities.
             </p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Exterior cleaning across Southern California — window cleaning,
+              pressure washing &amp; soft washing.
+            </p>
           </div>
 
           <nav

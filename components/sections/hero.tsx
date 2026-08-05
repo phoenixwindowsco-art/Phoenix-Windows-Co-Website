@@ -53,10 +53,26 @@ export function Hero() {
         </Reveal>
         <Reveal delay={200}>
           <p className="mx-auto mt-6 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
-            Streak-free, professional window cleaning for homes and businesses
-            across Southern California — and we give back to a team that gives
-            back with every job.
+            Specializing in <span className="font-semibold text-foreground">exterior cleaning</span> — streak-free
+            window cleaning and pressure washing for homes and businesses across
+            Southern California. And we give back to the community with every
+            job.
           </p>
+        </Reveal>
+
+        <Reveal delay={250}>
+          <ul className="mt-6 flex flex-wrap items-center justify-center gap-2">
+            {['Exterior Window Cleaning', 'Pressure Washing', 'Soft Washing'].map(
+              (service) => (
+                <li
+                  key={service}
+                  className="rounded-md border border-border bg-card px-3 py-1.5 text-sm font-medium text-foreground"
+                >
+                  {service}
+                </li>
+              ),
+            )}
+          </ul>
         </Reveal>
 
         <Reveal delay={300}>
